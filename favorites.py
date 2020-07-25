@@ -11,6 +11,8 @@ with open("favorites.csv", "r") as file:
             counts[title] += 1
         else:
             counts[title] = 1
-for title, count in counts.items():
-    print(title, count, sep =" | ")   
+def f(item):
+    return item[1]            
+for title, count in sorted(counts.items(), key=lambda item: item[1], reverse=True):
+    print(title, count, sep=" | ")   
         
