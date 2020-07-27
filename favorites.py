@@ -6,7 +6,7 @@ with open("favorites.csv", "r") as file:
     
     counts = {}
     for row in reader:
-        title = row["title"]
+        title = row["title"].lower()
         if title in counts:
             counts[title] += 1
         else:
@@ -14,5 +14,5 @@ with open("favorites.csv", "r") as file:
 def f(item):
     return item[1]            
 for title, count in sorted(counts.items(), key=lambda item: item[1], reverse=True):
-    print(title, count, sep=" | ")   
+    print(title, count)
         
