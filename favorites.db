@@ -1,0 +1,9 @@
+SELECT title FROM favorites;
+
+SELECT title FROM favorites ORDER BY title;
+
+SELECT title, COUNT(title) FROM favorites GROUP BY title;
+
+SELECT title, COUNT(title) AS n FROM favorites GROUP BY title ORDER BY n DESC LIMIT 10;
+
+
